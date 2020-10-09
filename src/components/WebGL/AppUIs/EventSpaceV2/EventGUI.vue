@@ -54,7 +54,7 @@
       </div> -->
 
       <div class="inline-block rounded-full touch-action-manipulation text-center select-none p-3 mx-1 my-1 w-12 h-12 bg-white text-20 text-black">
-        <a href="/"><img class="touch-action-manipulation scale-75 transform select-none pointer-events-none" src="./img/menu.svg" alt=""></a>
+        <router-link to="/"><img class="touch-action-manipulation scale-75 transform select-none pointer-events-none" src="./img/menu.svg" alt=""></router-link>
       </div>
     </div>
 

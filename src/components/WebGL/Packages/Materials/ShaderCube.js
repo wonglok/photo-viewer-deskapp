@@ -164,9 +164,15 @@ export class ShaderCube {
       // var generateMipmaps = renderTargetCube.texture.generateMipmaps
       // renderTargetCube.texture.generateMipmaps = false
 
-      renderer.setRenderTarget(this.renderTargetPlane)
-      renderer.render(scene, camera)
-      renderer.setRenderTarget(null)
+      // renderer.setRenderTarget(this.renderTargetPlane)
+      // renderer.render(scene, camera)
+      // renderer.setRenderTarget(null)
+
+      if (renderer) {
+        renderer.setRenderTarget(this.renderTargetPlane)
+        renderer.render(scene, camera)
+        renderer.setRenderTarget(null)
+      }
 
       this.renderTargetCube.compute()
     })

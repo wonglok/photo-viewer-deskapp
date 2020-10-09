@@ -1,6 +1,7 @@
 'use strict'
 
 import { app, protocol, BrowserWindow } from 'electron'
+// import { app, BrowserWindow } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
 import { autoUpdater } from "electron-updater"
@@ -12,7 +13,7 @@ let win
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
-  { scheme: 'app', privileges: { secure: true, standard: true } }
+  { scheme: 'app', privileges: { secure: true, supportFetchAPI: true, standard: true } }
 ])
 
 function createWindow() {
@@ -34,6 +35,7 @@ function createWindow() {
   } else {
     createProtocol('app')
     // Load the index.html when not in development
+    // win.loadFile('index.html')
     win.loadURL('app://./index.html')
 
     autoUpdater.checkForUpdatesAndNotify()

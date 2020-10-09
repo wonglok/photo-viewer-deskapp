@@ -54,16 +54,16 @@
             <button :key="'char' + i" v-for="(char, i) in CharList" :style="{ backgroundColor: idx + '' === (char.key) + '' ? 'rgba(255,255,255,0.3)' : '' }" class="p-1 border border-white rounded-full px-3 outline-none text-xs m-1" @click="idx = char.key">{{ char.name }}</button>
           </div>
           <div>
-            <a class="inline-block m-3" :href="`/app?character=${idx}`">
+            <router-link class="inline-block m-3" :to="`/app?character=${idx}`">
               <button v-if="!showLoading" class="p-3 border border-white rounded-full px-8 outline-none" style="background-color: rgba(255,255,255,0.3)">Start Game</button>
               <button v-if="showLoading" class="p-3 border border-white rounded-full px-8 outline-none" style="background-color: rgba(255,255,255,0.3)">Loading... {{ loadingPercentage }}%</button>
-            </a>
+            </router-link>
           </div>
 
           <div>
-            <a class="inline-block m-3" :href="`/find-actions?character=${idx}`">
+            <router-link class="inline-block m-3" :to="`/find-actions?character=${idx}`">
               <button class="p-3 border border-white rounded-full px-5 outline-none text-xs">Explore Actions</button>
-            </a>
+            </router-link>
           </div>
 
           <div class="m-3">

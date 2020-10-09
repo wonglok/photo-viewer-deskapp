@@ -15,6 +15,10 @@ new Vue({
   render: h => h(App),
 }).$mount('#app')
 
+if (window.location.href === 'app://./index.html') {
+  router.push('/')
+}
+
 // if (process.env.NODE_ENV === 'production') {
 //   let unregister = async () => {
 //     try {
