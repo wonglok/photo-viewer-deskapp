@@ -11,7 +11,7 @@
     "icons": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
     "deploy-to-github": "git add .; git commit -am \"git backup\"; git push -u origin master",
     "deploy-m": "npm run build; npm run vercel;",
-    "deploy": "yarn deploy-to-github; yarn electron:build -p always",
+    "deploy": "yarn deploy-to-github; vue-cli-service electron:build -p always",
     "dev-o2": "vue-cli-service serve --port 8080",
     "dev-o": "vue-cli-service serve --port $PORT",
     "devs": "vue-cli-service serve --port 8080 --https",
