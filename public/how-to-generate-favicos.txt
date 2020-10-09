@@ -1,0 +1,1 @@
+vue-asset-generate -a logo.png -o img
