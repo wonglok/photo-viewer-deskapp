@@ -6,12 +6,12 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "git add .; git commit -am \"git backup\"; git push -u origin master",
+    "deploy-to-vercel": "git add .; git commit -am \"git backup\"; git push -u origin master",
     "deploy-m": "npm run build; npm run vercel;",
     "dev-o2": "vue-cli-service serve --port 8080",
     "dev-o": "vue-cli-service serve --port $PORT",
     "devs": "vue-cli-service serve --port 8080 --https",
-    "dev": "vue-cli-service electron:build",
+    "dev": "vue-cli-service electron:serve",
     "electron:build": "vue-cli-service electron:build",
     "electron:serve": "vue-cli-service electron:serve",
     "netlify": "netlify deploy --prod --dir=\"./dist\";",
@@ -55,7 +55,8 @@
     "vue-color": "^2.7.1",
     "vue-hot-reload-api": "^2.3.4",
     "vue-router": "^3.3.4",
-    "vue2-ace-editor": "^0.0.15"
+    "vue2-ace-editor": "^0.0.15",
+    "worker-plugin": "^5.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",

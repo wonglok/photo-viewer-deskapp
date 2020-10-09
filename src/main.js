@@ -15,19 +15,19 @@ new Vue({
   render: h => h(App),
 }).$mount('#app')
 
-if (process.env.NODE_ENV === 'production') {
-  let unregister = async () => {
-    try {
-      if ('serviceWorker' in navigator) {
-        let registrations = await navigator.serviceWorker.getRegistrations()
-        for (let registration of registrations) {
-          // await registration.update()
-          await registration.unregister()
-        }
-      }
-    } catch (e) {
-      console.error(e)
-    }
-  }
-  unregister()
-}
+// if (process.env.NODE_ENV === 'production') {
+//   let unregister = async () => {
+//     try {
+//       if ('serviceWorker' in navigator) {
+//         let registrations = await navigator.serviceWorker.getRegistrations()
+//         for (let registration of registrations) {
+//           // await registration.update()
+//           await registration.unregister()
+//         }
+//       }
+//     } catch (e) {
+//       console.error(e)
+//     }
+//   }
+//   unregister()
+// }

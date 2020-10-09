@@ -5,9 +5,11 @@ module.exports = {
   configureWebpack: {
     plugins: [new WorkerPlugin()]
   },
-  electronBuilder: {
-    builderOptions: {
-      publish: ['github']
+  pluginOptions: {
+    electronBuilder: {
+      builderOptions: {
+        publish: ['github']
+      }
     }
   }
 }
